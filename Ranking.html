@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>무신사 스토어</title>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    body{
+        min-width: 980px;
+    }
+
+    .navbar{
+        height: 60px;
+        background-color: #000;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .logo{
+        text-decoration: none;
+        color: #fff;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 60px;
+    }
+
+    .search{
+        height: 44px;
+        width: 180px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 52px;
+    }
+
+    input#search{
+        width: 140px;
+        border: 0;
+        font-size: 16px;
+        float: left;
+        outline: 0;
+        color: #fff;
+        padding: 4px;
+        background-color: #000;
+        border-bottom: 1px solid #fff;
+        text-align: center;
+        font-weight: 300;
+    }
+
+    .searchIcon{
+        border: 0;
+        background-color: #000;
+        outline: none;
+        float: left;
+        margin-left: 8px;
+    }
+
+    .search input#search::-webkit-input-placeholder{
+        color: #fff;
+    }
+
+    .search input#search::-moz-placeholder{
+        color: #fff;
+    }
+
+    .search input#search::-ms-input-placeholder{
+        color: #fff;
+    }
+
+    .hamberger{
+        float: right;
+        margin-left: 32px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    .login{
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        float: right;
+        line-height: 60px;
+    }
+
+    .container{
+        margin-top: 74px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .title{
+        width: 962px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .title h1{
+        font-size: 16px;
+        font-weight: 700;
+        color: #353535;
+        margin-bottom: 16px;
+    }
+
+    .title p{
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 80px;
+        line-height: 24px;
+    }
+
+    .box{
+        list-style: none;
+        padding: 20px 0px;
+        width: 980px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .category{
+        height: 80px;
+        display: block;
+        border-top: 1px solid #8d8d8d;
+        border-bottom: 1px solid #8d8d8d;
+        margin-bottom: 80px;
+    }
+
+    .category li{
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        float: left;
+        cursor: pointer;
+    }
+
+    .tap{
+        padding: 4px 8px;
+        border: 1px solid #353535;
+        border-radius: 20px;
+        margin-right: 24px; 
+    }
+
+    .tap:hover{
+        background-color: #000;
+        color: #fff;
+    }
+
+    .products{
+        /* padding-left: 176px;
+        padding-right: 176px; */
+        width: 962px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .product{
+        margin-left: auto;
+        margin-right: auto;
+        float: left;
+        margin-right: 16px;
+    }
+
+    .product img{
+        margin-bottom: 16px;
+    }
+
+    a{
+        text-decoration: none;
+        color: #353535;
+    }
+
+    .ranking{
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .brandName{
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 8px;
+    }
+
+    .productName{
+        font-size: 12px;
+        font-weight: 400;
+        margin-top: 4px;
+    }
+
+    .price{
+        font-size: 12px;
+        font-weight: 700;
+        margin-top: 16px;
+        margin-bottom: 80px;
+    }
+
+    .clearfix{
+        clear: both;
+    }
+
+    .footer{
+        padding: 64px 176px;
+        font-size: 12px;
+        color: #fff;
+        background-color: #000;
+        margin-top: 160px;
+        font-weight: 400;
+    }
+
+    .info{
+        float: left;
+        width: 260px;
+        margin-right: 80px;
+        height: 116px;
+    }
+
+    .explain{
+        margin-top: 16px;
+        font-weight: 200;
+        line-height: 20px;
+    }
+
+    .contact{
+        margin-top: 40px;
+    }
+
+    .contact a{
+        margin-right: 16px;
+    }
+
+    .copyright{
+        margin-top: 40px;
+        font-weight: 400;
+    }
+
+    
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <a class="logo" href="#">MUSINSA</a>
+        <div class="search">
+            <input id="search" placeholder="첫구매 50% 할인" />
+            <button class="searchIcon"><img src="/img/sreachIcon.png" width="24px"></button>
+        </div>
+        <img class="hamberger" src="/img/hamberger.png" width="20px">
+        <a class="login" href="#">로그인</a>
+    </div>
+
+    <div class="container">
+        <div class="real-timeRanking">
+            <div class="title">
+                <h1>실시간 랭킹</h1>
+                <p>무신사 랭킹은 상품 매출, 판매 수량, 상품 조회 수, 작성 후기 수를 반영한 공식에 의해 선정됩니다.<br>
+                    무신사 스토어는 광고 목적으로 랭킹을 절대 임의 조작하지 않으므로 믿고 구매하셔도 됩니다.</p>
+            </div>
+
+            <div class="category">
+            <ul class="box">
+                <li class="tap">전체</li>
+                <li class="tap">상의</li>
+                <li class="tap">아우터</li>
+                <li class="tap">바지</li>
+                <li class="tap">원피스</li>
+                <li class="tap">스커트</li>
+                <li class="tap">스니커즈</li>
+                <li class="tap">가방</li>
+                <li class="tap">모자</li>
+                <li class="tap">액세서리</li>
+                <li class="tap">시계</li>
+                <li><img src="/img/cancellation.png" height="30px"></li>
+            </ul>
+            </div>
+
+            <div class="products">    
+            <div class="product">
+                <img src="/img/unionblueW.jpg" width="224px">
+                <p class="ranking">1위</p>
+                <p class="brandName">유니온블루</p>
+                <p class="productName">SUNDAY SHIRT (WHITE)</p>
+                <p class="price">62,000원</p>
+            </div>
+            <div class="product">
+                <img src="/img/covernat.jpg" width="224px">
+                <p class="ranking">2위</p>
+                <p class="brandName">커버낫</p>
+                <p class="productName">에센셜 쿨 코튼 2-PACK</p>
+                <p class="price">49,000원</p>
+            </div>
+            <div class="product">
+                <img src="/img/unionblueB.jpg" width="224px">
+                <p class="ranking">3위</p>
+                <p class="brandName">유니온블루</p>
+                <p class="productName">SUNDAY SHIRT (SKY BLUE)</p>
+                <p class="price">62,000원</p>
+            </div>
+            <div class="product">
+                <a href="/Product.html"><img src="/img/suare.jpg" width="224px"></a>
+                <p class="ranking">4위</p>
+                <p class="brandName">수아레</p>
+                <p class="productName">린넨 라이크 세미 와이드 밴딩 팬츠</p>
+                <p class="price">66,000원</p>
+            </div>
+            <div class="product">
+                <img src="/img/lafudgestore.jpg" width="224px">
+                <p class="ranking">5위</p>
+                <p class="brandName">라퍼지스토어</p>
+                <p class="productName">시티보이 빅오버 옥스포드 반팔</p>
+                <p class="price">45,000원</p>
+            </div>
+            <div class="product">
+                <img src="/img/wholovesart.jpg" width="224px">
+                <p class="ranking">6위</p>
+                <p class="brandName">후러브스아트</p>
+                <p class="productName">유니섹스 세미 와이드 밴딩 팬츠</p>
+                <p class="price">54,000원</p>
+            </div>
+            <div class="product">
+                <img src="/img/toffee.jpg" width="224px">
+                <p class="ranking">7위</p>
+                <p class="brandName">토피</p>
+                <p class="productName">SL01 시밀러 린넨 데님</p>
+                <p class="price">49,000원</p>
+            </div>
+            <div class="product">
+                <img src="/img/drmartensMyles.jpg" width="224px">
+                <p class="ranking">8위</p>
+                <p class="brandName">닥터마틴</p>
+                <p class="productName">마일즈 블랙 슬리퍼</p>
+                <p class="price">170,000원</p>
+            </div>
+            <!-- <div class="product">
+                <img src="/drmartensTerry.jpg" width="220px">
+                <p class="ranking">9위</p>
+                <p class="brandName">닥터마틴</p>
+                <p class="productName">테리 블랙 브란도 샌들</p>
+                <p class="price">170,000원</p>
+            </div> -->
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="box">
+        <div class="info">
+            무신사 편집팀
+            <div class="explain">서울특별시 강남구 신사동 640-2<br>로빈명품관 지하1층, 무신사 편집팀
+                <br>(무신사 스토어 반송지 아님, 해당주소 반송불가)</div>
+        </div>
+        <div class="info">
+            무신사 스토어
+            <div class="explain">(17759) 경기도 평택시 신장로 55 CJ대한통운 평택합정집배점 내 무신사 물류센터
+                <br>(무신사 스토어 자체 배송 상품 물류센터)
+                <br>(배송센터 직접 물건 수령 불가)</div>
+        </div>
+        <div class="CS">
+            고객센터
+            <div class="explain">1544 - 7199  |  1:1 문의  |  이메일
+                <br>평일 오전 9시 - 오후 6시
+                <br>(상품 문의는 각 상품 페이지에서 [문의하기] 등록)
+                <br><br>FAQ 자주 묻는 질문</div>
+        </div>
+
+        <div class="clearfix"></div>
+        <div class="contact">
+            <a href="#"><img src="/img/youtube.jpg" width="24px"></a>
+            <a href="#"><img src="/img/instagram.png" width="24px"></a>
+            <a href="#"><img src="/img/facebook.png" width="24px"></a>
+            <a href="#"><img src="/img/twitter.png" width="24px"></a>
+            <a href="#"><img src="/img/naverpost.png" width="24px"></a>
+        </div>
+        <div class="copyright">
+            COPYRIGHT (C) MUSINSA ALL RIGHTS RESERVED.
+            <div class="explain">무신사닷컴 내 매거진, 스트리트스냅, 스토어 등 무신사 자체 생성 콘텐츠는 무신사닷컴 및 무신사 계약업체에 저작권이 있습니다.
+                이러한 콘텐츠는 출처를 밝히고(무신사닷컴 표기 및 www.musinsa.com 링크 포함 필수) 비상업적인 용도에서만 활용하실 수 있습니다.
+                <br><br>커뮤니티 및 중고장터, 댓글 등 무신사 회원이 올린 이미지가 저작권에 위배될 경우 신고 하시면 검토 후 삭제하겠습니다.</div>
+        </div>
+        </div>
+    </div>
+        
+    <script>
+
+    </script>
+</body>
+</html>
